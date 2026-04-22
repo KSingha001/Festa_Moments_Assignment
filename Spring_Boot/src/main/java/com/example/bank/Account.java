@@ -1,10 +1,8 @@
 package com.example.bank;
 
 import jakarta.persistence.*;
-import lombok.Data;
 
 @Entity
-@Data
 public class Account {
 
     @Id
@@ -13,4 +11,14 @@ public class Account {
 
     private String name;
     private double balance;
+
+    // getters
+    public int getId() { return id; }
+    public String getName() { return name; }
+    public double getBalance() { return balance; }
+
+    // setters
+    public void setId(int id) { this.id = id; }
+    public void setName(String name) { this.name = name; }
+    public void setBalance(double balance) { this.balance = balance; }
 }

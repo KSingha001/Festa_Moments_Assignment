@@ -14,8 +14,14 @@ public class BankController {
     @Autowired
     private BankService service;
 
-    @PostMapping("/create")
-    public Account create(@RequestBody Account acc) {
+    @GetMapping("/create")
+    public Account create(@RequestParam String name,
+                          @RequestParam double balance) {
+
+        Account acc = new Account();
+        acc.setName(name);
+        acc.setBalance(balance);
+
         return service.createAccount(acc);
     }
 
