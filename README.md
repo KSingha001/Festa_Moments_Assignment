@@ -68,10 +68,14 @@ This repository contains the Java assignments completed for the Festa Moments pr
   - `Main` provides a console-based CRUD menu.
   - `hibernate.cfg.xml` contains database configuration.
 
-### 7. Java Caching + Relationships (Pending)
+### 7. Java Caching + Relationships (Submitted)
 - **Start:** Apr 30, 2026
 - **Deadline:** May 02, 2026 at 23:59
-- **Status:** Pending — not implemented yet.
+- **Location:** `StudentManagementHibernate/UserOrderCaching`
+- **What’s inside:**
+  - `UserService` uses an in-memory `HashMap` cache to store users after the first fetch.
+  - `User` contains a list of `Order` objects, modeling a simple user-to-orders relationship.
+  - `Main` demonstrates database fetch vs cached fetch output.
 
 ## Notes
 - Most assignments are plain Java files and can be run from an IDE or via `javac/java`.
